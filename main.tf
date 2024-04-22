@@ -74,7 +74,7 @@ resource "aws_key_pair" "key_pair" {
 resource "aws_instance" "project1_instance" {
   ami                    = "ami-06aa3f7caf3a30282" # Canonical, Ubuntu, 20.04 LTS, amd64 focal image build on 2023-10-25
   instance_type          = "t2.micro"
-  vpc_security_group_ids = [aws_security_group.demo.id]
+  vpc_security_group_ids = [aws_security_group.p1_sg.id]
 
   tags = {
     Name = "project1"
